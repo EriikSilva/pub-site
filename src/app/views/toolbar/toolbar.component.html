@@ -1,0 +1,48 @@
+<p-sidebar
+  [(visible)]="display"
+  [style]="{ width: '20em' }"
+  [baseZIndex]="10000"
+>
+  <p-button
+    label="Pagina Inicial"
+    [style]="{ width: '100%', 'margin-bottom': '1rem' }"
+    routerLink="/"
+    routerLinkActive="active-link"
+  ></p-button>
+  <br />
+  <p-button
+    label="Eventos"
+    [style]="{ width: '100%', 'margin-bottom': '1rem' }"
+    routerLink="/eventos"
+    routerLinkActive="active-link"
+  ></p-button>
+  <br />
+  <p-button
+    label="Cardápio"
+    [style]="{ width: '100%', 'margin-bottom': '1rem' }"
+    routerLink="/cardapio"
+    routerLinkActive="active-link"
+  ></p-button>
+  <br />
+</p-sidebar>
+
+<p-toolbar>
+  <div class="p-toolbar-group-start">
+    <!-- <p-button label="New" icon="pi pi-plus"></p-button>
+        <p-button label="Upload" icon="pi pi-upload" styleClass="p-button-success"></p-button> -->
+
+    <p-button icon="pi pi-bars" (click)="display = true"></p-button>
+  </div>
+  <div class="p-toolbar-group-center">
+    <img src="../../../assets/primeng-logo.png" routerLink="/" />
+  </div>
+  <div class="p-toolbar-group-end">
+    <p-button icon="pi pi-search" routerLink="/eventos"></p-button>
+    <p-button
+      icon="pi pi-calendar"
+      routerLink="/cardapio"
+      styleClass="p-button-success"
+    ></p-button>
+    <p-button icon="pi pi-times" styleClass="p-button-danger"></p-button>
+  </div>
+</p-toolbar>
